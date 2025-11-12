@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Carousel</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(15, 15, 20);
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  width: 1140px;
+  max-width: 80%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+header a {
+  margin-right: 40px;
+  transition: color 0.3s ease;
+}
+header a:hover {
+  color: rgb(237, 179, 102);
+}
+
+/* Carousel Container */
+.crousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: -50px;
+  background-color: black;
+}
+
+/* Each Slide */
+.crousel .list .item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.2s ease, transform 2.5s ease;
+}
+
+.crousel .list .item.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Image Layer */
+.crousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1);
+  transition: transform 8s ease;
+}
+
+.crousel .list .item.active img {
+  transform: scale(1.05);
+}
+
+/* Content Overlay */
+.crousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  color: white;
+  text-shadow: 0 5px 15px black;
+  z-index: 3;
+}
+
+.crousel .list .item .content .author {
+  font-weight: bold;
+  letter-spacing: 8px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.5s ease forwards 0.2s;
+}
+
+.crousel .list .item .content .title,
+.crousel .list .item .content .project {
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 1em;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.5s ease forwards 0.4s;
+}
+
+.crousel .list .item .content .project {
+  color: rgb(237, 179, 102);
+  animation-delay: 0.6s;
+}
+
+.crousel .list .item .content .des {
+  font-size: 1.5em;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease forwards 0.8s;
+}
+
+.crousel .list .item .content .button {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease forwards 1s;
+}
+
+.crousel .list .item .content button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: rgb(237, 179, 102);
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.crousel .list .item .content button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Thumbnails */
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+.thumbnail .item {
+  width: 140px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.thumbnail .item:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: filter 0.5s ease;
+  border-radius: 15px;
+}
+
+.thumbnail .item.active img {
+  filter: brightness(1);
+  outline: 3px solid rgb(237, 179, 102);
+}
+
+/* Thumbnail Content */
+.thumbnail .item .content {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Navigation Arrows */
+.arrows {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 20;
+ 
+}
+
+.arrows button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background-color: transparent;
+  color:transparent;
+
+}
+.arrows button:hover {
+  background: rgb(237, 179, 102);
+  color: black;
+}
+
+/* Fade-up Animation for Text */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">home</a>
+            <a href="#">content</a>
+            <a href="#">info</a>
+        </nav>
+    </header>
+    <div class="crousel">
+        <div class="list">
+            <div class="item active"> 
+                <img src="img10.jpg" alt="Image of the Sun and Solar System">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">sun</div>
+                    <div class="des">The Sun is a middle-aged, yellow dwarf star and the center of our entire solar system. This massive, luminous sphere of superheated plasma is primarily composed of hydrogen and helium, which constantly undergo nuclear fusion in its core to release enormous amounts of energy. Located about 150 million kilometers from Earth, the Sun's light and heat are the essential drivers for all life on our planet, influencing everything from weather patterns and ocean currents to the process of photosynthesis in plants. Its immense gravitational pull keeps every planet, asteroid, and comet in a stable orbit, making it the dominant and most vital celestial body in our corner of the galaxy.</div>
+                    <div class="button">
+                        <a href="sun.html"> <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="mercury5.jpg" alt="Image of mercury">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">Mercury</div>
+                    <div class="des"> Mercury is the smallest and closest planet to the Sun. It’s a rocky world covered with craters, much like Earth’s Moon. Because it has almost no atmosphere, it experiences extreme temperatures — scorching hot during the day and freezing cold at night. Mercury moves very fast in its orbit, completing one round around the Sun in just 88 Earth days. Despite its small size, it has a large iron core, making it one of the densest planets in the Solar System.</div>
+                    <div class="button">
+                        <a href="mercury.html"> <button>see more</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="venus.jpeg" alt="Image of venus">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">venus</div>
+                    <div class="des">Venus is the second planet from the Sun and is often called Earth’s “twin” because both planets are similar in size and composition. However, Venus has a thick atmosphere made mostly of carbon dioxide, which traps heat and makes it the hottest planet in the Solar System. Its surface is covered with volcanoes, mountains, and vast plains of lava. Unlike most other planets, Venus rotates in the opposite direction, meaning the Sun rises in the west and sets in the east. The dense clouds of sulfuric acid make it impossible to see the surface from space.</div>
+                    <div class="button">
+                        <a href="venus.html"> <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+             <div class="item">
+                <img src="earth.jpeg" alt="Image of earth">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">earth</div>
+                    <div class="des"> Earth is the third planet from the Sun and the only known planet to support life. It has a balanced atmosphere made mainly of nitrogen and oxygen, which helps maintain a comfortable temperature and allows living organisms to breathe. About 71% of Earth’s surface is covered with water, while the rest consists of land with mountains, forests, and deserts. Earth’s rotation causes day and night, and its revolution around the Sun creates seasons. It also has one natural satellite, the Moon, which affects tides and stabilizes the planet’s tilt.</div>
+                    <div class="button">
+                       <a href="earth.html"> <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="mars.jpg" alt="Image of mars">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">mars</div>
+                    <div class="des"> Mars is the fourth planet from the Sun and is often called the "Red Planet" because of its reddish appearance caused by iron oxide (rust) on its surface. It is a cold, desert-like world with mountains, valleys, and the largest volcano in the Solar System, Olympus Mons. Mars has a thin atmosphere made mostly of carbon dioxide, which makes it impossible for humans to breathe without assistance. Scientists are very interested in Mars because it shows signs that liquid water once existed there, raising the possibility that life may have existed in the past.</div>
+                    <div class="button">
+                       <a href="mars.html">  <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+             <div class="item">
+                <img src="jupiter.jpg" alt="Image of jupiter">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">jupiter</div>
+                    <div class="des"> Jupiter is the largest planet in our Solar System and is known as a gas giant because it is made mostly of hydrogen and helium. It is famous for its colorful bands of clouds and the Great Red Spot — a massive storm that has raged for centuries. Jupiter has a very strong magnetic field and at least 95 known moons, including Ganymede, the largest moon in the Solar System. Despite its size, Jupiter has a very short day, rotating once every 10 hours. Its immense gravity also helps protect the inner planets by deflecting many comets and asteroids. </div>
+                    <div class="button">
+                     <a href="jupiter.html"> <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+             <div class="item">
+                <img src="saturn.jpg" alt="Image of saturn">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">saturn</div>
+                    <div class="des">Saturn is the second-largest planet in our Solar System and is best known for its stunning ring system made of ice, rock, and dust. Like Jupiter, Saturn is a gas giant composed mainly of hydrogen and helium. It has at least 145 moons, with Titan being the largest and one of the most Earth-like bodies in the Solar System. Saturn’s atmosphere features soft yellow and golden hues due to ammonia crystals in its upper clouds. Despite its massive size, Saturn has a very low density — it could actually float in water if there were a bathtub large enough to hold it</div>
+                    <div class="button">
+                      <a href="saturn.html"> <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+             <div class="item">
+                <img src="uranus4.jpg" alt="Image of uranus">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">uranus</div>
+                    <div class="des"> Uranus is the seventh planet from the Sun and is unique for its sideways rotation — it spins on its axis tilted by about 98 degrees, making its seasons extreme and unlike any other planet. It’s an ice giant composed mainly of water, methane, and ammonia, giving it a pale blue-green color due to methane in its atmosphere. Uranus has a faint ring system and at least 27 known moons. It is also one of the coldest planets in the Solar System, with temperatures dropping as low as –224°C, making it a frigid and mysterious world </div>
+                    <div class="button">
+                      <a href="uranus.html">  <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+             <div class="item">
+                <img src="img9.jpg" alt="Image of neptune">
+                <div class="content">
+                    <div class="author">khushi,sheetal,bhavishya,ajay</div>
+                    <div class="title">solar system</div>
+                    <div class="project">neptune</div>
+                    <div class="des"> Neptune is the eighth and farthest planet from the Sun, known for its striking deep blue color caused by methane in its atmosphere. It is an ice giant with fierce winds that are the fastest in the Solar System, reaching speeds of over 2,000 kilometers per hour. Neptune’s atmosphere is composed mainly of hydrogen, helium, and methane, with storm systems similar to Jupiter’s Great Red Spot. Despite its great distance, it has a dynamic climate and faint rings. Discovered in 1846, Neptune remains a symbol of the outer, mysterious reaches of our Solar System </div>
+                    <div class="button">
+                      <a href="neptune.html">  <button>see more</button> </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="img10.jpg" alt="sun thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">Sun</div> 
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="mercurythumbnail.jpg" alt="mercury thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">mercury</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="venusthumbnail.jpg" alt="venus thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">venus</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img4.jpeg" alt="earth thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">earth</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="marsthumbnail.jpg" alt="mars thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">mars</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="jupiter3.jpg" alt="jupiter thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">jupiter</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="saturnthumbnail.jpg" alt="saturn thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">saturn</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="uranusthumbnail.jpg"uranus thumbnail>
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">uranus</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="neptunethumbnail.jpg" alt="neptune thumbnail">
+                    <div class="content">
+                        <div class="title">solar system</div>
+                        <div class="des">neptune</div>
+                    </div>
+                </div>
+
+                <div class="arrows">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+            </div>
+    </div>
+    <script src="app.js"></script> 
+</body>
+</html>
