@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Saturn</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0; 
+                color: white; 
+                position: relative; 
+                min-height: 100vh; 
+                
+                /* Changed to Saturn image */
+                background-image: url('saturn.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-attachment: fixed; 
+                filter: blur(5px); 
+                -webkit-filter: blur(0px);
+                z-index: -2; 
+            }
+
+            
+            body::before {
+                content: '';
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: -1; 
+            }
+
+            .content-wrapper { 
+                position: relative; 
+                z-index: 1;
+                padding: 20px; 
+                margin: 20px; 
+                background-color: rgba(0, 0, 0, 0.4); 
+                border-radius: 10px;
+            }
+
+            h1 {
+                text-align: center;
+                color: rgb(209, 147, 32); 
+                font-size: 50px;
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                color: rgb(237, 179, 102);
+                margin-top: 30px;
+            }
+
+            p {
+                line-height: 1.6; 
+                margin-bottom: 20px;
+            }
+
+            .data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                color: white;
+            }
+
+            .data-table th, .data-table td {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 10px;
+                text-align: left;
+            }
+
+            .data-table th {
+                background-color: rgba(237, 179, 102, 0.2);
+                color: rgb(237, 179, 102);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <h1>SATURN</h1>
+            <p>Saturn is the sixth planet from the Sun and the second-largest planet in our Solar System, famous for its magnificent and extensive system of rings. A gas giant, it's a breathtaking celestial body primarily composed of hydrogen and helium, shrouded in swirling clouds.</p>
+            
+            <h3>Key Facts</h3>
+            <table class="data-table">
+                <tr><th>Feature</th><th>Detail</th></tr>
+                <tr><td>Classification</td><td>Gas Giant</td></tr>
+                <tr><td>Distance from Sun</td><td>1.4 billion km (9.5 AU)</td></tr>
+                <tr><td>Orbital Period (Year)</td><td>29.5 Earth years</td></tr>
+                <tr><td>Rotational Period (Day)</td><td>10.7 Earth hours (Very fast!)</td></tr>
+                <tr><td>Atmosphere</td><td>Mainly Hydrogen, Helium</td></tr>
+                <tr><td>Moons</td><td>146 (Largest: Titan)</td></tr>
+            </table>
+
+            <h3>💎 The Iconic Ring System</h3>
+            <p>Saturn's rings are its most distinctive feature, making it one of the most beautiful objects in the night sky. While all gas giants have rings, Saturn's are by far the largest and most visible.</p>
+            <ul>
+                <li>Composition: The rings are not solid, but are made up of billions of tiny pieces of ice (ranging from micron-sized dust grains to house-sized boulders) mixed with rocky material.</li>
+                <li>Structure: They extend hundreds of thousands of kilometers from the planet but are incredibly thin, typically only tens of meters thick. They are organized into several main groups (A, B, C, D, E, F, G) with gaps and divisions between them, such as the prominent Cassini Division.</li>
+                <li>Origin: The exact origin of Saturn's rings is still debated, but theories suggest they could be the remnants of shattered moons or comets that broke apart due to Saturn's powerful gravity.</li>
+            </ul>
+            
+            <h3>💨 Atmosphere and Internal Structure</h3>
+            <p>Like Jupiter, Saturn is a gas giant with no solid surface. Its atmosphere is characterized by faint bands and occasional storms, though less dramatic than Jupiter's Great Red Spot.</p>
+            <ul>
+                <li>Composition:** Predominantly hydrogen, with smaller amounts of helium and trace elements like methane and ammonia.</li>
+                <li>Winds: Extremely high wind speeds, reaching up to 1,800 km/h (1,100 mph) in the equatorial region, much faster than on Jupiter.</li>
+                <li>Internal Heat:** Saturn radiates more heat than it receives from the Sun, believed to be generated by the slow gravitational contraction of the planet and possibly by "helium rain" deep within its interior.</li>
+            </ul>
+            
+            <h3>🛰️ Moons: A Diverse Family</h3>
+            <p>Saturn has the most moons of any planet in our Solar System, with 146 confirmed moons. Many of them interact with the ring system, acting as "shepherd moons" that help maintain the rings' structure.</p>
+            <ul>
+                <li>Titan:** Saturn's largest moon, and the second-largest moon in the entire Solar System (larger than Mercury!), is unique for having a dense atmosphere and stable bodies of liquid (methane and ethane) on its surface, making it somewhat like a primitive Earth.</li>
+                <li> Enceladus:** A smaller, icy moon known for its active geysers that spray water vapor and ice particles into space, contributing material to Saturn's E-ring. This suggests the presence of a subsurface ocean, making it a prime candidate for astrobiological study.</li>
+            </ul>
+            
+            <h3>🔭 Exploration</h3>
+            <p>Missions like Voyager 1 and 2 provided early close-up views of Saturn. The Cassini-Huygens mission** (1997-2017) was a monumental success, extensively studying Saturn, its rings, and its moons, revolutionizing our understanding of this majestic planet.</p>
+        </div>
+    </body>
+</html>
