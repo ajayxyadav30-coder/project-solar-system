@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mars</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0; 
+                color: white; 
+                position: relative; 
+                min-height: 100vh; 
+                
+                /* Changed to Mars image */
+                background-image: url('img6.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-attachment: fixed; 
+                filter: blur(5px); 
+                -webkit-filter: blur(0px);
+                z-index: -2; 
+            }
+
+            
+            body::before {
+                content: '';
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: -1; 
+            }
+
+            .content-wrapper { 
+                position: relative; 
+                z-index: 1;
+                padding: 20px; 
+                margin: 20px; 
+                background-color: rgba(0, 0, 0, 0.4); 
+                border-radius: 10px;
+            }
+
+            h1 {
+                text-align: center;
+                color: rgb(209, 147, 32); 
+                font-size: 50px;
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                color: rgb(237, 179, 102);
+                margin-top: 30px;
+            }
+
+            p {
+                line-height: 1.6; 
+                margin-bottom: 20px;
+            }
+
+            .data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                color: white;
+            }
+
+            .data-table th, .data-table td {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 10px;
+                text-align: left;
+            }
+
+            .data-table th {
+                background-color: rgba(237, 179, 102, 0.2);
+                color: rgb(237, 179, 102);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <h1>MARS</h1>
+            <p>Known as the **Red Planet**, Mars is the fourth planet from the Sun and a cold, desert world with a thin atmosphere. It's one of the most explored planets, sparking immense scientific interest due to evidence suggesting it once held liquid water on its surface and its potential for future human exploration.</p>
+            
+            <h3>Key Facts</h3>
+            <table class="data-table">
+                <tr><th>Feature</th><th>Detail</th></tr>
+                <tr><td>Classification</td><td>Terrestrial (Rocky) Planet</td></tr>
+                <tr><td>Distance from Sun</td><td>228 million km (1.52 AU)</td></tr>
+                <tr><td>Orbital Period (Year)</td><td>687 Earth days</td></tr>
+                <tr><td>Rotational Period (Day)</td><td>24.6 Earth hours (Very similar to Earth!)</td></tr>
+                <tr><td>Average Temperature</td><td>$-63^\circ\text{C}$ ($-82^\circ\text{F}$)</td></tr>
+                <tr><td>Moons</td><td>2 (Phobos and Deimos)</td></tr>
+            </table>
+
+            <h3>🔴 The Red Planet's Distinctive Color</h3>
+            <p>Mars gets its characteristic reddish-orange hue from **iron oxides** (rust) prevalent in its soil and dust. This ubiquitous rust gives the entire planet its iconic appearance, visible even from Earth.</p>
+            
+            <h3>🏜️ Surface and Geology</h3>
+            <p>The Martian surface is a diverse landscape featuring volcanoes, canyons, and polar ice caps, alongside vast plains and heavily cratered regions:</p>
+            <ul>
+                <li>**Olympus Mons:** The largest volcano in the Solar System, a shield volcano so massive it covers an area roughly the size of Arizona. Its gentle slopes rise to an astounding 25 km (16 miles) above the surrounding plains.</li>
+                <li>**Valles Marineris:** An immense canyon system, stretching over 4,000 km (2,500 miles) long, up to 200 km (120 miles) wide, and 7 km (4 miles) deep. It dwarfs Earth's Grand Canyon and hints at massive tectonic forces or water erosion in Mars's past.</li>
+                <li>**Polar Ice Caps:** Mars has two polar ice caps composed of both water ice and frozen carbon dioxide (dry ice), which expand and contract with the Martian seasons.</li>
+            </ul>
+            
+            <h3>🌬️ Atmosphere and Climate</h3>
+            <p>Mars has a very thin atmosphere, primarily composed of **carbon dioxide** (about 95%), with trace amounts of nitrogen and argon. This thin atmosphere is insufficient to trap much heat, contributing to the planet's cold temperatures.</p>
+            <ul>
+                <li>**Dust Storms:** Mars is famous for its planet-encircling dust storms, which can obscure the entire surface for months. These storms are driven by temperature differences and seasonal changes.</li>
+                <li>**Water Evidence:** Abundant geological evidence, including dry riverbeds, lakebeds, and mineral deposits, strongly suggests that liquid water once flowed extensively on Mars's surface billions of years ago. Today, water exists primarily as ice in the polar caps and subsurface permafrost.</li>
+            </ul>
+            
+            <h3>🔭 Moons: Phobos and Deimos</h3>
+            <p>Mars has two small, irregularly shaped moons, **Phobos** and **Deimos**. They are believed to be captured asteroids rather than forming alongside Mars. Phobos orbits incredibly close to Mars and is slowly spiraling inward, destined to either crash into the planet or break apart into a ring system in tens of millions of years.</p>
+
+            <h3>🛰️ Exploration and Future Potential</h3>
+            <p>Mars is the most extensively explored planet in our Solar System, with numerous orbiters, landers, and rovers (like Perseverance, Curiosity, and the Insight lander) studying its geology, atmosphere, and the potential for past or present life. Its relative proximity and potential resources make it a primary target for future human missions and colonization efforts.</p>
+        </div>
+    </body>
+</html>
