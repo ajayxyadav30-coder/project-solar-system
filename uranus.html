@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Uranus</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0; 
+                color: white; 
+                position: relative; 
+                min-height: 100vh; 
+                
+                /* Changed to Uranus image (using img2.jpeg as a placeholder) */
+                background-image: url('uranus4.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-attachment: fixed; 
+                filter: blur(5px); 
+                -webkit-filter: blur(0px);
+                z-index: -2; 
+            }
+
+            
+            body::before {
+                content: '';
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: -1; 
+            }
+
+            .content-wrapper { 
+                position: relative; 
+                z-index: 1;
+                padding: 20px; 
+                margin: 20px; 
+                background-color: rgba(0, 0, 0, 0.4); 
+                border-radius: 10px;
+            }
+
+            h1 {
+                text-align: center;
+                color: rgb(209, 147, 32); 
+                font-size: 50px;
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                color: rgb(237, 179, 102);
+                margin-top: 30px;
+            }
+
+            p {
+                line-height: 1.6; 
+                margin-bottom: 20px;
+            }
+
+            .data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                color: white;
+            }
+
+            .data-table th, .data-table td {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 10px;
+                text-align: left;
+            }
+
+            .data-table th {
+                background-color: rgba(237, 179, 102, 0.2);
+                color: rgb(237, 179, 102);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <h1>URANUS</h1>
+            <p>Uranus is the seventh planet from the Sun and the third largest planet by diameter. It is classified as an **Ice Giant** (along with Neptune), meaning it consists mainly of water, methane, and ammonia ices above a small rocky core. It was the first planet discovered with the aid of a telescope in 1781 by William Herschel.</p>
+            
+            <h3>Key Facts</h3>
+            <table class="data-table">
+                <tr><th>Feature</th><th>Detail</th></tr>
+                <tr><td>Classification</td><td>Ice Giant</td></tr>
+                <tr><td>Distance from Sun</td><td>2.9 billion km (19.2 AU)</td></tr>
+                <tr><td>Orbital Period (Year)</td><td>84 Earth years</td></tr>
+                <tr><td>Rotational Period (Day)</td><td>17.2 Earth hours (Retrograde)</td></tr>
+                <tr><td>Minimum Temperature</td><td>$-224^\circ\text{C}$ (Coldest atmosphere)</td></tr>
+                <tr><td>Moons</td><td>28 known moons</td></tr>
+            </table>
+
+            <h3>🧊 The Cold, Blue-Green Ice Giant</h3>
+            <p>Uranus has a distinctive **cyan-colored** appearance, which comes from the methane gas in its atmosphere. The methane absorbs red light and reflects the blue and green portions back to space. Its atmosphere, composed primarily of hydrogen and helium, holds the lowest minimum temperature of any planet in the solar system 
+
+[Image of Uranus]
+.</p>
+            
+            <h3>🔄 The Sideways Spinner</h3>
+            <p>The most unique feature of Uranus is its extreme **axial tilt of 97.77 degrees**. This causes the planet to effectively spin on its side, orbiting the Sun like a rolling ball. Scientists believe this severe tilt may be the result of a collision with an Earth-sized object early in its history.</p>
+            <ul>
+                <li>**Extreme Seasons:** This unique tilt leads to the most extreme seasons in the solar system. One pole faces the Sun for about 42 Earth years of continuous sunlight, followed by 42 years of continuous darkness.</li>
+                <li>**Retrograde Rotation:** Like Venus, Uranus rotates backward (retrograde) relative to its orbit, though its unusual tilt makes this less apparent.</li>
+            </ul>
+            
+            <h3>💍 Faint Rings and Tilted Field</h3>
+            <p>Uranus is surrounded by **13 known rings**. These rings are very narrow and dark, making them difficult to observe compared to Saturn's spectacular system. The planet also has a peculiar magnetic field:</p>
+            <ul>
+                <li>**Lopsided Magnetosphere:** Uranus’s magnetic field is steeply tilted (about 59 degrees) from its rotational axis and is significantly offset from the planet’s center. This means the magnetic field tumbles and gyrates wildly as the planet rotates.</li>
+                <li>**Composition:** The rings are composed of dark particles ranging from dust to small boulders.</li>
+            </ul>
+            
+            <h3>🛰️ Exploration</h3>
+            <p>Uranus has only been visited once by a spacecraft: **NASA's Voyager 2** in January 1986. This flyby provided almost all of the detailed data we have on the planet, its moons (which are named after characters from the works of William Shakespeare and Alexander Pope), and its unusual magnetic field.</p>
+        </div>
+    </body>
+</html>
