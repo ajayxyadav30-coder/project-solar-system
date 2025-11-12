@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Neptune</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0; 
+                color: white; 
+                position: relative; 
+                min-height: 100vh; 
+                
+                /* Changed to Neptune image (using img5.jpeg as a placeholder) */
+                background-image: url('img9.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-attachment: fixed; 
+                filter: blur(5px); 
+                -webkit-filter: blur(0px);
+                z-index: -2; 
+            }
+
+            
+            body::before {
+                content: '';
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: -1; 
+            }
+
+            .content-wrapper { 
+                position: relative; 
+                z-index: 1;
+                padding: 20px; 
+                margin: 20px; 
+                background-color: rgba(0, 0, 0, 0.4); 
+                border-radius: 10px;
+            }
+
+            h1 {
+                text-align: center;
+                color: rgb(209, 147, 32); 
+                font-size: 50px;
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                color: rgb(237, 179, 102);
+                margin-top: 30px;
+            }
+
+            p {
+                line-height: 1.6; 
+                margin-bottom: 20px;
+            }
+
+            .data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                color: white;
+            }
+
+            .data-table th, .data-table td {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 10px;
+                text-align: left;
+            }
+
+            .data-table th {
+                background-color: rgba(237, 179, 102, 0.2);
+                color: rgb(237, 179, 102);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <h1>NEPTUNE</h1>
+            <p>Neptune is the eighth and most distant planet from the Sun, classified as an **Ice Giant** along with Uranus. This dark, cold world is the densest of the giant planets and is notable for its incredibly powerful, supersonic winds, the fastest recorded in the Solar System. It was the only planet discovered through **mathematical prediction** rather than telescopic observation.</p>
+            
+            <h3>Key Facts</h3>
+            <table class="data-table">
+                <tr><th>Feature</th><th>Detail</th></tr>
+                <tr><td>Classification</td><td>Ice Giant</td></tr>
+                <tr><td>Distance from Sun</td><td>4.5 billion km (30.1 AU)</td></tr>
+                <tr><td>Orbital Period (Year)</td><td>164.8 Earth years</td></tr>
+                <tr><td>Rotational Period (Day)</td><td>16.1 Earth hours</td></tr>
+                <tr><td>Atmosphere</td><td>Hydrogen, Helium, and Methane</td></tr>
+                <tr><td>Moons</td><td>16 known moons (Largest: Triton)</td></tr>
+            </table>
+
+            <h3>🥶 The Deep Blue and Coldest Giant</h3>
+            <p>Neptune appears a striking, vivid blue 
+
+[Image of Neptune]
+, a deeper hue than Uranus, though both colors are caused by the absorption of red light by **methane** in their upper atmospheres. Neptune's outer atmosphere is one of the coldest places in the Solar System, with temperatures plummeting to about $-218^\circ\text{C}$.</p>
+            
+            <h3>💨 Supersonic Winds and Vanishing Storms</h3>
+            <p>Neptune is a dynamic, windy world. It radiates more energy than it receives from the Sun, fueling an extremely active climate:</p>
+            <ul>
+                <li>**Fastest Winds:** Winds whip through Neptune's atmosphere at speeds reaching up to 2,100 km/h (1,300 mph), the fastest sustained winds of any planet.</li>
+                <li>**Great Dark Spot:** When Voyager 2 visited in 1989, it observed a massive Earth-sized storm called the **Great Dark Spot**. However, when observed later by the Hubble Space Telescope in 1994, the spot had vanished, indicating rapidly changing weather patterns.</li>
+            </ul>
+            
+            <h3>💍 Rings and Tilted Field</h3>
+            <p>Neptune possesses at least five main rings and four prominent ring arcs. These rings are thought to be relatively young and short-lived. Like Uranus, Neptune's magnetic field is steeply tilted and offset from the center of the planet, leading to an erratic magnetosphere.</p>
+            
+            <h3>🛰️ Triton: The Icy Moon</h3>
+            <p>Neptune's largest moon, **Triton**, is unique for orbiting the planet in a backward (retrograde) direction, suggesting it was captured by Neptune's gravity rather than forming in place. Triton has a highly reflective surface and is the coldest object observed in the Solar System. It features **active geysers** that erupt nitrogen ice and dust, hinting at possible subsurface activity.</p>
+        </div>
+    </body>
+</html>
