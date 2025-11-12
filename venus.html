@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sun</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0; 
+                color: white; 
+                position: relative; 
+                min-height: 100vh; 
+                
+                
+                background-image: url('venus.jpeg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-attachment: fixed; 
+                filter: blur(5px); 
+                -webkit-filter: blur(0px);
+                z-index: -2; 
+            }
+
+            
+            body::before {
+                content: '';
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: -1; 
+            }
+
+            .content-wrapper { 
+                position: relative; 
+                z-index: 1;
+                padding: 20px; 
+                margin: 20px; 
+                background-color: rgba(0, 0, 0, 0.4); 
+                border-radius: 10px;
+            }
+
+            h1 {
+                text-align: center;
+                color: rgb(209, 147, 32); 
+                font-size: 50px;
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                color: rgb(237, 179, 102);
+                margin-top: 30px;
+            }
+
+            p {
+                line-height: 1.6; 
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <h1>VENUS</h1>
+            <p>Venus is the second planet from the Sun and often called Earth's "sister planet" due to their similar size, mass, and bulk composition. However, the similarities end there; Venus is a world of extreme, scorching heat and immense atmospheric pressure. It is classified as a Terrestrial (Rocky) Planet.</p>
+            
+            <h3>Key Facts</h3>
+            <table class="data-table">
+                <tr><th>Feature</th><th>Detail</th></tr>
+                <tr><td>Distance from Sun</td><td>108 million km (0.72 AU)</td></tr>
+                <tr><td>Orbital Period (Year)</td><td>225 Earth days</td></tr>
+                <tr><td>Rotational Period (Day)</td><td>243 Earth days (Retrograde)</td></tr>
+                <tr><td>Surface Temperature</td><td>$\approx 475^\circ\text{C}$ ($887^\circ\text{F}$)</td></tr>
+                <tr><td>Moons</td><td>None</td></tr>
+            </table>
+
+            
+            <h3>🔥 The Runaway Greenhouse Effect</h3>
+            <p>Venus is the **hottest planet** in our Solar System, despite not being the closest to the Sun (that's Mercury)<span class="footnote">5</span>. This extreme temperature is due to a runaway greenhouse effect:</p>
+            
+            <p>
+                **Dense Atmosphere:** The atmosphere is incredibly dense and heavy, consisting of over **96% carbon dioxide ($\text{CO}_2$)**<span class="footnote">6, 7</span>.
+            </p>
+            
+            <p>
+                **Heat Trap:** The dense $\text{CO}_2$<span class="footnote">8</span> acts like a thick blanket, trapping solar heat and preventing it from radiating back into space<span class="footnote">9</span>.
+            </p>
+            
+            <p>
+                **Uniform Heat:** The planet's slow rotation and dense atmosphere distribute heat very efficiently, meaning the temperature is relatively uniform day and night, equator to pole.
+            </p>
+            
+            <h3>💨 Atmosphere and Weather</h3>
+            <p>The atmosphere of Venus is toxic and crushing<span class="footnote">10</span>:</p>
+            
+            <p>
+                **Pressure:** The atmospheric pressure on the surface is about **92 times** that of Earth's sea level, equivalent to the pressure felt about 1 kilometer (0.6 miles) deep in Earth's ocean.
+            </p>
+            
+            <p>
+                **Sulfuric Acid Clouds:** High-altitude clouds are composed of **sulfuric acid**, creating a corrosive environment<span class="footnote">11</span>.
+            </p>
+            
+            <p>
+                **Winds:** While the planet rotates very slowly (a Venusian day is longer than its year), the top layers of the atmosphere race around the planet in only four Earth days, a phenomenon called **super-rotation**<span class="footnote">12</span>.
+            </p>
+            
+            <h3>⛰️ Surface and Unique Rotation</h3>
+            <p>The surface of Venus is hidden from view by its permanent cloud cover and has been mapped using radar by missions like NASA's Magellan spacecraft<span class="footnote">13</span>.</p>
+            
+            <p>
+                **Volcanic Activity:** The surface features evidence of extensive **volcanic activity**, with vast plains covered in lava flows<span class="footnote">14</span>. There are two major highland regions: Aphrodite Terra and Ishtar Terra<span class="footnote">15</span>.
+            </p>
+            
+            <p>
+                **Retrograde Rotation:** Venus rotates backward (**retrograde**) compared to most other planets in the Solar System<span class="footnote">16</span>. This means that if you could stand on Venus, the Sun would appear to rise in the west and set in the east. The cause of this unique rotation is still debated, but it may be the result of a massive ancient collision.
+            </p>
+        </div>
+    </body>
+</html>
